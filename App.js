@@ -1,18 +1,13 @@
-function getUserDetails (date, interest) {
-    console.log(`My name is ${this.name} and my age is ${this.age}, ${date}`)
+class User {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+    describe() {
+        console.log(`${this.name} is now a user on this website and his age is ${this.age}`)
+    }
 }
 
-const oldMonk = {
-    age: 7,
-    name: "oldMonk",
-    description: "Old Monk XXX 7 Years Old"
-}
+const user = new User("oldMonk", 7)
 
-const aniket = {
-    age: 23,
-    name: "Aniket Datta",
-    aboutMe: "I love Old Monk"
-}
-
-getUserDetails.apply(oldMonk, [1948, "Dark Rum"])
-getUserDetails.call(aniket)
+user.describe()
