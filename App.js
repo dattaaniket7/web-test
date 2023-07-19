@@ -14,5 +14,5 @@ const aniket = {
     aboutMe: "I love Old Monk"
 }
 
-getUserDetails.call(oldMonk, 1948, "Dark Rum")
+getUserDetails.apply(oldMonk, [1948, "Dark Rum"])
 getUserDetails.call(aniket)
