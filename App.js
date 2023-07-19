@@ -1,5 +1,5 @@
-function getUserDetails () {
-    console.log(`My name is ${this.name} and my age is ${this.age}`)
+function getUserDetails (date, interest) {
+    console.log(`My name is ${this.name} and my age is ${this.age}, ${date}`)
 }
 
 const oldMonk = {
@@ -14,6 +14,5 @@ const aniket = {
     aboutMe: "I love Old Monk"
 }
 
-const oldMonkDetail = getUserDetails.bind(oldMonk)
-
-oldMonkDetail()
+getUserDetails.call(oldMonk, 1948, "Dark Rum")
+getUserDetails.call(aniket)
